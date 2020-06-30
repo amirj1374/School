@@ -8,6 +8,7 @@ import {Student} from '../../models/student';
 })
 export class StudentsComponent implements OnInit {
   student: Student;
+  students: Student[];
 
   constructor() {
     this.student = {
@@ -16,6 +17,32 @@ export class StudentsComponent implements OnInit {
       grade: 20,
       enName: 'ali'
     };
+    this.students = [
+      {
+        id: 12,
+        name: 'علی',
+        grade: 20,
+        enName: 'ali'
+      },
+      {
+        id: 12,
+        name: 'علی',
+        grade: 20,
+        enName: 'ali'
+      },
+      {
+        id: 12,
+        name: 'علی',
+        grade: 20,
+        enName: 'ali'
+      },
+      {
+        id: 12,
+        name: 'علی',
+        grade: 20,
+        enName: 'ali'
+      }
+    ];
   }
 
   ngOnInit(): void {
