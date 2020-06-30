@@ -1,32 +1,28 @@
-<h2>اطلاعات دانش آموز شماره{{student.id}}</h2>
-<div>
-  <span>شناسه: </span>{{student.id}}
-</div>
-<div>
-  <span>نام: </span>{{student.name}}
-</div>
-<div>
-  <span>معدل: </span>{{student.grade}}
-</div>
-<div>
-  <span>نام لاتین: </span>{{student.enName|uppercase}}
-</div>
-<br><p>نام خود را وارد کنید</p>
-<br><input type="text" [(ngModel)]="student.name"/>
-<br><p>نام لاتین خود را وارد کنید</p>
-<br><input type="text" [(ngModel)]="student.enName"/>
-<br><p>معدل خود را وارد کنید</p>
-<br><input type="number" [(ngModel)]="student.grade"/>
-<br><p>شناسه خود را وارد کنید</p>
-<br><input type="number" [(ngModel)]="student.id"/>
-
-
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<ul>
-  <li *ngFor="let s of students">{{s.name}}</li>
+<h2 class="para">اطلاعات دانش آموز</h2>
+<!--<div>-->
+<!--  <span>شناسه: </span>{{student.id}}-->
+<!--</div>-->
+<!--<div>-->
+<!--  <span>نام: </span>{{student.name}}-->
+<!--</div>-->
+<!--<div>-->
+<!--  <span>معدل: </span>{{student.grade}}-->
+<!--</div>-->
+<!--<div>-->
+<!--  <span>نام لاتین: </span>{{student.enName|uppercase}}-->
+<!--</div>-->
+<!--<br><p>نام خود را وارد کنید</p>-->
+<!--<br><input type="text" [(ngModel)]="student.name"/>-->
+<!--<br><p>نام لاتین خود را وارد کنید</p>-->
+<!--<br><input type="text" [(ngModel)]="student.enName"/>-->
+<!--<br><p>معدل خود را وارد کنید</p>-->
+<!--<br><input type="number" [(ngModel)]="student.grade"/>-->
+<!--<br><p>شناسه خود را وارد کنید</p>-->
+<!--<br><input type="number" [(ngModel)]="student.id"/>-->
+<!--<br>-->
+<ul  class="student">
+  <li *ngFor="let s of students">
+    <span class="badge">{{s.name}}</span> {{s.id}}
+  </li>
 </ul>
 

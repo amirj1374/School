@@ -11,36 +11,36 @@ export class StudentsComponent implements OnInit {
   students: Student[];
 
   constructor() {
-    this.student = {
-      id: 12,
-      name: 'علی',
-      grade: 20,
-      enName: 'ali'
-    };
     this.students = [
       {
-        id: 12,
+        id: 10,
         name: 'علی',
-        grade: 20,
+        grade: 19 ,
         enName: 'ali'
       },
       {
-        id: 12,
-        name: 'علی',
-        grade: 20,
-        enName: 'ali'
+        id: 11 ,
+        name: 'امیر',
+        grade: 15,
+        enName: 'amir'
       },
       {
         id: 12,
-        name: 'علی',
-        grade: 20,
-        enName: 'ali'
+        name: 'میثم',
+        grade: 18,
+        enName: 'meysam'
       },
       {
-        id: 12,
-        name: 'علی',
-        grade: 20,
-        enName: 'ali'
+        id: 13,
+        name: 'مجید',
+        grade: 16,
+        enName: 'majid'
+      },
+      {
+        id: 14,
+        name: 'محمود',
+        grade: 18,
+        enName: 'mahmud'
       }
     ];
   }

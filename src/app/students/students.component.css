@@ -1,0 +1,52 @@
+.student {
+  background-color: #ffd300 !important;
+  color:black;
+}
+.student {
+  margin:0 0 2em 0;
+  list-style-type: none;
+  padding: 0;
+  width: 15em;
+}
+.student li {
+  cursor: pointer;
+  position: relative;
+  right: 0;
+  background-color: #ff0037;
+  margin:.5cm;
+  padding: .3em 0;
+  height: 1.6em;
+  border-radius: 4px;
+}
+.student li.selected:hover {
+  background-color: white;
+  color: black;
+}
+.student li:hover {
+  color: black;
+  background-color: aqua;
+  right: 1em;
+}
+.student .text {
+  position: relative;
+  top: -3px;
+}
+.student .badge {
+  display:inline-block;
+  font-size: small;
+  color: white;
+  padding:0.8px 0.7px 0.7px;
+  background-color: black;
+  line-height: 1em;
+  position: relative;
+  right: -1px;
+  top:-4px;
+  height: 1.8em;
+  margin-left:.8em;
+  border-radius: 0.4px 4px 0;
+}
+.para {
+  border: 5px;
+  background-color: #ffb300;
+  font: inherit;
+}
