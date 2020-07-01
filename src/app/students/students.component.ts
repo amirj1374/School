@@ -9,14 +9,14 @@ import {Student} from '../../models/student';
 export class StudentsComponent implements OnInit {
   student: Student;
   students: Student[];
-
+  selectedStudent: Student;
   constructor() {
     this.students = [
       {
         id: 10,
-        name: 'علی',
+        name: 'محمد',
         grade: 19 ,
-        enName: 'ali'
+        enName: 'mohammad'
       },
       {
         id: 11 ,
@@ -47,8 +47,8 @@ export class StudentsComponent implements OnInit {
 
   ngOnInit(): void {
     const self = this;
-    setTimeout(() => {
-      self.student.name = 'رضا';
-    }, 1000);
+}
+  onSelect(students: Student){
+    this.selectedStudent = this.student;
   }
 }
