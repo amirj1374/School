@@ -7,19 +7,19 @@ import {Student} from '../../models/student';
   styleUrls: ['./students.component.css']
 })
 export class StudentsComponent implements OnInit {
-  student: Student;
   students: Student[];
-  selectedStudent: Student;
+  selectedStudent: Student = new Student();
+
   constructor() {
     this.students = [
       {
         id: 10,
         name: 'محمد',
-        grade: 19 ,
+        grade: 19,
         enName: 'mohammad'
       },
       {
-        id: 11 ,
+        id: 11,
         name: 'امیر',
         grade: 15,
         enName: 'amir'
@@ -45,10 +45,15 @@ export class StudentsComponent implements OnInit {
     ];
   }
 
-  ngOnInit(): void {
-    const self = this;
-}
-  onSelect(students: Student){
-    this.selectedStudent = this.student;
+
+  // tslint:disable-next-line:typedef
+  onSelect(students: Student) {
+    this.selectedStudent = students;
+
   }
+
+  ngOnInit(): void {
+  }
+
+
 }
