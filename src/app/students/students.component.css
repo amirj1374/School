@@ -1,5 +1,5 @@
 .student {
-  background-color: #ffd300 !important;
+  background-color: darkmagenta !important;
   color:black;
 }
 .student {
@@ -12,7 +12,7 @@
   cursor: pointer;
   position: relative;
   right: 0;
-  background-color: #ff0037;
+  background-color: lightcoral;
   margin:.5cm;
   padding: .3em 0;
   height: 1.6em;
@@ -20,11 +20,15 @@
 }
 .student li.selected:hover {
   background-color: white;
-  color: black;
+  color: darkslategray;
 }
+.student li.selected{
+  background-color: darkslategray;
+}
+
 .student li:hover {
-  color: black;
-  background-color: aqua;
+  color: wheat;
+  background-color: #b48bff;
   right: 1em;
 }
 .student .text {
@@ -47,6 +51,6 @@
 }
 .para {
   border: 5px;
-  background-color: #ffb300;
+  background-color: mediumorchid;
   font: inherit;
 }

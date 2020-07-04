@@ -8,7 +8,7 @@ import {Student} from '../../models/student';
 })
 export class StudentsComponent implements OnInit {
   students: Student[];
-  selectedStudent: Student = new Student();
+  selectedStudent: Student;
 
   constructor() {
     this.students = [
@@ -46,10 +46,15 @@ export class StudentsComponent implements OnInit {
   }
 
 
+
   // tslint:disable-next-line:typedef
-  onSelect(students: Student) {
+  onSelect(students) {
     this.selectedStudent = students;
 
+  }
+  // tslint:disable-next-line:typedef
+  onClose(){
+    this.selectedStudent = null;
   }
 
   ngOnInit(): void {

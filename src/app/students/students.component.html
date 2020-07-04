@@ -1,31 +1,8 @@
-<div>
-  <div *ngIf="selectedStudent">
-    <h2 class="para">اطلاعات دانش آموز{{selectedStudent.id}}</h2>
-    <div>
-      <span>شناسه: </span>{{selectedStudent.id}}
-    </div>
-    <div>
-      <span>نام: </span>{{selectedStudent.name}}
-    </div>
-    <div>
-      <span>معدل: </span>{{selectedStudent.grade}}
-    </div>
-    <div>
-      <span>نام لاتین: </span>{{selectedStudent.enName|uppercase}}
-    </div>
-  </div>
-  <br><input type="text" [(ngModel)]="selectedStudent.name"/>
-  <!--<br><p>نام لاتین خود را وارد کنید</p>-->
-  <!--<br><input type="text" [(ngModel)]="students.enName"/>-->
-  <!--<br><p>معدل خود را وارد کنید</p>-->
-  <!--<br><input type="number" [(ngModel)]="student.grade"/>-->
-  <!--<br><p>شناسه خود را وارد کنید</p>-->
-  <!--<br><input type="number" [(ngModel)]="student.id"/>-->
-  <!--<br>-->
+<app-student-detail *ngIf="selectedStudent" [student]="selectedStudent"></app-student-detail>
   <ul class="student">
-    <li *ngFor="let s of students" (click)="onSelect(s)">
+    <li *ngFor="let s of students" (click)="onSelect(s)" [class.selected]="s === selectedStudent">
       <span class="badge">{{s.name}}</span> {{s.id}}
     </li>
   </ul>
-</div>
+
 
