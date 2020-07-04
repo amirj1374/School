@@ -52,13 +52,11 @@ export class StudentsComponent implements OnInit {
     this.selectedStudent = students;
 
   }
-  // tslint:disable-next-line:typedef
-  onClose(){
-    this.selectedStudent = null;
-  }
-
   ngOnInit(): void {
   }
-
+  // tslint:disable-next-line:typedef
+  onClose() {
+    this.selectedStudent = null;
+  }
 
 }

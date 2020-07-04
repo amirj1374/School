@@ -1,3 +1,4 @@
+<button (click)="onClose()">بستن</button>
 <app-student-detail [student]="selectedStudent" *ngIf="selectedStudent"></app-student-detail>
   <ul class="student">
     <li *ngFor="let s of students" (click)="onSelect(s)" [class.selected]="s === selectedStudent">
