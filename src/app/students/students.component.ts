@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Student} from '../../models/student';
+import {StudentService} from '../services/student.service';
+import {subscribeTo} from 'rxjs/internal-compatibility';
 
 @Component({
   selector: 'app-students',
@@ -10,41 +12,9 @@ export class StudentsComponent implements OnInit {
   students: Student[];
   selectedStudent: Student;
 
-  constructor() {
-    this.students = [
-      {
-        id: 10,
-        name: 'محمد',
-        grade: 19,
-        enName: 'mohammad'
-      },
-      {
-        id: 11,
-        name: 'امیر',
-        grade: 15,
-        enName: 'amir'
-      },
-      {
-        id: 12,
-        name: 'میثم',
-        grade: 18,
-        enName: 'meysam'
-      },
-      {
-        id: 13,
-        name: 'مجید',
-        grade: 16,
-        enName: 'majid'
-      },
-      {
-        id: 14,
-        name: 'محمود',
-        grade: 18,
-        enName: 'mahmud'
-      }
-    ];
-  }
+  constructor(private studentService: StudentService) {
 
+  }
 
 
   // tslint:disable-next-line:typedef
@@ -52,11 +22,18 @@ export class StudentsComponent implements OnInit {
     this.selectedStudent = students;
 
   }
+
   ngOnInit(): void {
+    this.initStudens();
   }
+
+  // tslint:disable-next-line:typedef
+  initStudens() {
+    this.studentService.getStudents().subscribe(students => {this.students = students});
+  }
+
   // tslint:disable-next-line:typedef
   onClose() {
     this.selectedStudent = null;
   }
-
 }
