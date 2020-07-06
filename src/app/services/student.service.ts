@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import {Student} from '../../models/student';
-import {Observable,of} from 'rxjs';
+import {Observable, of} from 'rxjs';
+import {MessagesService} from './messages.service';
 
 // @ts-ignore
 @Injectable({
@@ -43,7 +44,8 @@ export class StudentService {
   constructor() {
   }
 
-  getStudents(): Observable<Student[] >{
+  getStudents(): Observable<Student[]> {
+
     return of(this.students);
   }
 }

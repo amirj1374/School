@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Student} from '../../models/student';
 import {StudentService} from '../services/student.service';
 import {subscribeTo} from 'rxjs/internal-compatibility';
+import {MessagesService} from '../services/messages.service';
 
 @Component({
   selector: 'app-students',
@@ -11,8 +12,9 @@ import {subscribeTo} from 'rxjs/internal-compatibility';
 export class StudentsComponent implements OnInit {
   students: Student[];
   selectedStudent: Student;
+  message = '';
 
-  constructor(private studentService: StudentService) {
+  constructor(private studentService: StudentService, private messageService: MessagesService) {
 
   }
 
@@ -20,7 +22,7 @@ export class StudentsComponent implements OnInit {
   // tslint:disable-next-line:typedef
   onSelect(students) {
     this.selectedStudent = students;
-
+    this.message = this.messageService.showMessage('VIEW');
   }
 
   ngOnInit(): void {
@@ -29,11 +31,14 @@ export class StudentsComponent implements OnInit {
 
   // tslint:disable-next-line:typedef
   initStudens() {
-    this.studentService.getStudents().subscribe(students => {this.students = students});
+    this.studentService.getStudents().subscribe(students => {
+      this.students = students;
+    });
   }
 
   // tslint:disable-next-line:typedef
   onClose() {
     this.selectedStudent = null;
+    this.message = '';
   }
 }
