@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Student} from '../../models/student';
 import {StudentService} from '../services/student.service';
-import {subscribeTo} from 'rxjs/internal-compatibility';
 import {MessagesService} from '../services/messages.service';
 
 @Component({
